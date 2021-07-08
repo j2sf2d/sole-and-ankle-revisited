@@ -33,15 +33,15 @@ const Header = () => {
           <NavLink href="/collections">Collections</NavLink>
         </DesktopNav>
         <MobileActions>
-          <UnstyledButton>
+          <ShoppingBagButton>
             <Icon id="shopping-bag" />
             <VisuallyHidden>Open cart</VisuallyHidden>
-          </UnstyledButton>
+          </ShoppingBagButton>
           <UnstyledButton>
             <Icon id="search" />
             <VisuallyHidden>Search</VisuallyHidden>
           </UnstyledButton>
-          <UnstyledButton>
+          <UnstyledButton onClick={() => setShowMobileMenu(true)}>
             <Icon id="menu" />
             <VisuallyHidden>Open menu</VisuallyHidden>
           </UnstyledButton>
@@ -69,6 +69,11 @@ const MainHeader = styled.div`
     justify-content: space-between;
     align-items: center;
   }
+
+  @media ${QUERIES.phoneAndSmaller} {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 `;
 
 const DesktopNav = styled.nav`
@@ -88,6 +93,10 @@ const MobileActions = styled.div`
     gap: 32px;
     display: flex;
   }
+
+  @media ${QUERIES.phoneAndSmaller} {
+    gap: 16px;
+  }
 `;
 
 const LogoWrapper = styled.div`
@@ -95,6 +104,10 @@ const LogoWrapper = styled.div`
   @media ${QUERIES.tabletAndSmaller} {
     flex: revert;
   }
+`;
+
+const ShoppingBagButton = styled(UnstyledButton)`
+  transform: translateX(-2px);
 `;
 
 const Filler = styled.div`

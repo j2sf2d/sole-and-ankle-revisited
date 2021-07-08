@@ -28,10 +28,12 @@ const Main = styled.main`
 
   @media ${QUERIES.tabletAndSmaller} {
     background: red;
+    padding: 48px 32px;
   }
 
   @media ${QUERIES.phoneAndSmaller} {
     background: fuchsia;
+    padding: 48px 16px;
   }
 `;
 
