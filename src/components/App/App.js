@@ -23,16 +23,16 @@ const Main = styled.main`
   padding: 64px 32px;
 
   @media ${QUERIES.laptopAndSmaller} {
-    background: yellow;
+    /* background: yellow; */
   }
 
   @media ${QUERIES.tabletAndSmaller} {
-    background: red;
+    /* background: red; */
     padding: 48px 32px;
   }
 
   @media ${QUERIES.phoneAndSmaller} {
-    background: fuchsia;
+    /* background: fuchsia; */
     padding: 48px 16px;
   }
 `;
